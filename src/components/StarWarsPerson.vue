@@ -3,6 +3,8 @@
 <v-card-title>
 <div>
     <h3> {{ person.name }} </h3>
+    <p>Birth Year: {{ person.birth_year }} </p>
+    <p>Gender: {{ person.gender }} </p>
 </div>
 
 </v-card-title>
@@ -15,6 +17,7 @@
 
 
 <script>
+
 export default {
     props: ["person"]
 

@@ -1,9 +1,4 @@
 export const people = [
-{
-	"count": 87,
-	"next": "https://swapi.co/api/people/?page=2",
-	"previous": null,
-	"results": [
 		{
 			"name": "Luke Skywalker",
 			"height": "172",
@@ -274,8 +269,5 @@ export const people = [
 			"created": "2014-12-10T16:16:29.192000Z",
 			"edited": "2014-12-20T21:17:50.325000Z",
 			"url": "https://swapi.co/api/people/10/"
-		}
-	],
-}
-
-]
+		},
+	]

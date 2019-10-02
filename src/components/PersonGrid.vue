@@ -13,6 +13,7 @@
 
 <script>
 import StarWarsPerson from "../components/StarWarsPerson";
+import { people } from '../assets/people';
 
 export default {
     props: ["people"],
@@ -20,7 +21,6 @@ export default {
         StarWarsPerson
     }
 }
-
 
 </script>
 
