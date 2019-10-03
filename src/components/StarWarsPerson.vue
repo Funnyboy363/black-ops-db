@@ -1,54 +1,65 @@
 <template>
 <div>
-    <v-card>
-<v-card-title>
-<div>
-    <h3> {{ person.name }} </h3>
-    <p>Birth Year: {{ person.birth_year }} </p>
-    <p>Gender: {{ person.gender }} </p>
-</div>
-
-</v-card-title>
-<v-card-actions>
-
-</v-card-actions>
-    </v-card>
-
-
-
+  
  <v-card
     class="mx-auto"
-    max-width="400"
+    max-width="300"
   >
-    <v-img
+     
+ <v-img
       class="white--text"
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
-      <v-card-title class="align-end fill-height">{{ person.name }} </v-card-title>
+    > <v-card-title class="align-end fill-height">{{person.name}}</v-card-title>
     </v-img>
-
+     
     <v-card-text>
-      <span>Number 10</span><br>
       <span class="text--primary">
-        <span> {{ person.birth_year }}</span><br>
-        <span>  {{ person.gender }} </span>
+        <span style="font-weight: bold;">Call Name:</span><span> {{ person.subname }}</span><br>
+        <span style="font-weight: bold;">Ability:</span><span> {{ person.ability }} </span> <br>
       </span>
     </v-card-text>
 
     <v-card-actions>
-      <v-btn
-        text
-        color="orange"
-      >
-        Share
-      </v-btn>
-      <v-btn
-        text
-        color="orange"
-      >
-        Explore
-      </v-btn>
+      <v-row style="margin-left: 10px;" justify="left">
+    <v-btn small width="80px"
+      color="orange" dark @click.stop="dialog = true">
+      more
+    </v-btn>
+
+    <v-dialog
+      v-model="dialog"
+      max-width="290"
+    >
+      <v-card>
+        <v-card-title class="headline">More about {{ person.name}} </v-card-title>
+
+        <v-card-text>
+        <h3>Equipment:</h3> {{ person.equipment }}
+        </v-card-text>
+
+        <v-card-actions>
+          <div class="flex-grow-1"></div>
+
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+           Close
+          </v-btn>
+
+          <!-- <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            Agree
+          </v-btn> -->
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </v-row>
     </v-card-actions>
   </v-card>   
 
@@ -62,8 +73,15 @@
 <script>
 
 export default {
-    props: ["person"],
+    props: ["person", "operator"],
 
+
+data () {
+      return {
+        dialog: false,
+      }
+    }
+  
 
 }
 </script>
@@ -72,6 +90,5 @@ export default {
 
 
 <style scoped>
-
 
 </style>
