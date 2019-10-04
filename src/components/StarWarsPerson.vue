@@ -8,13 +8,15 @@
      
  <v-img
       class="white--text"
-      height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    > <v-card-title class="align-end fill-height">{{person.name}}</v-card-title>
+      height="400px"
+       src="../assets/images/battery2.jpg">
+      <!-- src="../assets/images/battery.jpg" -->
+      <!-- :src="require(person.image[0])" -->
     </v-img>
      
     <v-card-text>
       <span class="text--primary">
+         <span style="font-weight: bold;">Specialist Name:</span><span> {{ person.name }}</span><br>
         <span style="font-weight: bold;">Call Name:</span><span> {{ person.subname }}</span><br>
         <span style="font-weight: bold;">Ability:</span><span> {{ person.ability }} </span> <br>
       </span>
@@ -71,6 +73,8 @@
 
 
 <script>
+import { people } from '../assets/people';
+
 
 export default {
     props: ["person", "operator"],
