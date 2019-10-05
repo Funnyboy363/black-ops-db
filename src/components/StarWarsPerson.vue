@@ -3,13 +3,13 @@
   
  <v-card
     class="mx-auto"
-    max-width="300"
+    max-width="350"
   >
      
- <v-img
+ <v-img style="background-position: top center;"
       class="white--text"
-      height="400px"
-       src="../assets/images/battery2.jpg">
+      height="350px"
+       :src="person.image">
       <!-- src="../assets/images/battery.jpg" -->
       <!-- :src="require(person.image[0])" -->
     </v-img>
@@ -95,4 +95,7 @@ data () {
 
 <style scoped>
 
+
+
+ 
 </style>
