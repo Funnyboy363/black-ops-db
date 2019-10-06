@@ -8,15 +8,16 @@
      
  <v-img style="background-position: top center;"
       class="white--text"
-      height="350px"
+      height="150px"
        :src="person.image[0]">
       <!-- src="../assets/images/battery.jpg" -->
       <!-- :src="require(person.image[0])" -->
+     <v-card-title class="align-end fill-height card-title"> {{ person.name }} </v-card-title>
     </v-img>
      
     <v-card-text>
       <span class="text--primary">
-         <span style="font-weight: bold;">Specialist Name:</span><span> {{ person.name }}</span><br>
+         <!-- <span style="font-weight: bold;">Specialist Name:</span><span> {{ person.name }}</span><br> -->
         <span style="font-weight: bold;">Call Name:</span><span> {{ person.subname }}</span><br>
         <span style="font-weight: bold;">Ability:</span><span> {{ person.ability }} </span> <br>
       </span>
@@ -31,11 +32,11 @@
 
     <v-dialog
       v-model="dialog"
-      max-width="290"
+      max-width="300"
     >
       <v-card>
         <v-img :src="person.image[1]"></v-img>
-        <v-card-title class="headline">More about {{ person.name}} </v-card-title>
+        <v-card-title class="headline"><span style="font-size: 15px; border-bottom: 2px solid black;">More about {{ person.name}}</span></v-card-title>
 
         <v-card-text>
         <h3>Equipment:</h3> {{ person.equipment }}
