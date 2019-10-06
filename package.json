@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
+    "vue-lazy-youtube-video": "^1.2.2",
+    "vue-youtube-embed": "^2.2.2",
     "vuetify": "^2.0.0"
   },
   "devDependencies": {

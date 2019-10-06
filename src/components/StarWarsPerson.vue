@@ -4,6 +4,7 @@
  <v-card
     class="mx-auto"
     max-width="350"
+    height="350px"
   >
      
  <v-img style="background-position: top center;"
@@ -19,7 +20,7 @@
       <span class="text--primary">
          <!-- <span style="font-weight: bold;">Specialist Name:</span><span> {{ person.name }}</span><br> -->
         <span style="font-weight: bold;">Call Name:</span><span> {{ person.subname }}</span><br>
-        <span style="font-weight: bold;">Ability:</span><span> {{ person.ability }} </span> <br>
+        <span style="font-weight: bold;">Ability:</span><span style="font-size: 12px;"> {{ person.ability }} </span> <br>
       </span>
     </v-card-text>
 
@@ -32,10 +33,11 @@
 
     <v-dialog
       v-model="dialog"
-      max-width="300"
+      max-width="500"
     >
       <v-card>
-        <v-img :src="person.image[1]"></v-img>
+        <LazyYoutubeVideo :url="person.video"></LazyYoutubeVideo>
+        <!-- <v-img :src="person.image[1]"></v-img> -->
         <v-card-title class="headline"><span style="font-size: 15px; border-bottom: 2px solid black;">More about {{ person.name}}</span></v-card-title>
 
         <v-card-text>
@@ -76,6 +78,9 @@
 
 <script>
 import { people } from '../assets/people';
+import LazyYoutubeVideo from 'vue-lazy-youtube-video';
+
+
 
 
 export default {
@@ -86,8 +91,11 @@ data () {
       return {
         dialog: false,
       }
-    }
-  
+    },
+   name: 'YourAwesomeComponent',
+  components: {
+    LazyYoutubeVideo
+  },
 
 }
 </script>

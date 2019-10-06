@@ -10,14 +10,35 @@
 
       </v-app-bar-nav>
 
-      <v-toolbar-title><p style="font-size: 35px; border-bottom: 8px solid #F16800;">Black Ops DB</p></v-toolbar-title>
+      
      
-      <div class="flex-grow-1"></div>
+      <!-- <div class="flex-grow-1"></div> -->
+      <v-row style="align-self: center;">
+<v-col cols="12" xs="12" sm="5" md="5" lg="4">
+      <v-toolbar-title><p style="font-size: 25px; text-align: center;">Black Ops DB</p></v-toolbar-title>
+</v-col>
+<v-col cols="12" xs="12" sm="2" md="2" lg="4"></v-col>
+<v-col cols="12" xs="12" sm="5" md="5" lg="4">
   <p class="subtitle">Information Database</p>
-     
+</v-col>
+      </v-row>
     </v-toolbar>
 <person-grid :people="people"></person-grid>
 <person-grid :operator="operators"></person-grid>
+
+<v-card height="150">
+    <v-footer style="background-color: rgb(58, 58, 58);"
+      absolute
+      class="font-weight-medium"
+    >
+      <v-col style="color: white;"
+        class="text-center"
+        cols="12"
+      >
+        <strong>GSWEBDEV</strong> {{ new Date().getFullYear() }} 
+      </v-col>
+    </v-footer>
+  </v-card>
     </v-content>
   </v-app>
 </template>
@@ -49,22 +70,22 @@ console.log (people);
 
  
 <style scoped>
+
+
+ .v-card {
+  background-color: rgb(241, 104, 0);
+}
+
+
 .v-content {
   background-color: rgb(58, 58, 58);
 }
 
-.v-toolbar__title {
- margin: auto 0;
- padding-left: 180px;
-}
 
 
 .subtitle {
-  font-size: 35px;
-  border-bottom: 8px solid #F16800;
-  justify-content: flex-end;
-  align-self: center;
-  margin-right: 100px;
+  font-size: 25px;
+ text-align: center;
 }
 
 </style>
