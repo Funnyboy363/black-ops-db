@@ -32,6 +32,10 @@ console.log (people);
 
 </script>
 
+ 
 <style scoped>
+.v-content {
+  background-color: rgb(58, 58, 58);
+}
 
 </style>

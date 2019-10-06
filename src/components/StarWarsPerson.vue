@@ -9,7 +9,7 @@
  <v-img style="background-position: top center;"
       class="white--text"
       height="350px"
-       :src="person.image">
+       :src="person.image[0]">
       <!-- src="../assets/images/battery.jpg" -->
       <!-- :src="require(person.image[0])" -->
     </v-img>
@@ -25,7 +25,7 @@
     <v-card-actions>
       <v-row style="margin-left: 10px;" justify="left">
     <v-btn small width="80px"
-      color="orange" dark @click.stop="dialog = true">
+      color="#F8740F" dark @click.stop="dialog = true">
       more
     </v-btn>
 
@@ -34,6 +34,7 @@
       max-width="290"
     >
       <v-card>
+        <v-img :src="person.image[1]"></v-img>
         <v-card-title class="headline">More about {{ person.name}} </v-card-title>
 
         <v-card-text>
