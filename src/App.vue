@@ -23,8 +23,12 @@
 </v-col>
       </v-row>
     </v-toolbar>
-<person-grid :people="people"></person-grid>
-<person-grid :operator="operators"></person-grid>
+<app-nav></app-nav>
+   
+
+    <router-view></router-view>
+<!-- <person-grid :people="people"></person-grid>
+<person-grid :operator="operators"></person-grid> -->
 
 <v-card height="150">
     <v-footer style="background-color: rgb(58, 58, 58);"
@@ -48,13 +52,23 @@
 import PersonGrid from './components/PersonGrid';
 import { people } from './assets/people';
 import { operators } from './assets/operators';
+import Nav from './components/Nav';
+import { ValidationProvider } from 'vee-validate';
+import { extend } from 'vee-validate';
+import { required } from 'vee-validate/dist/rules';
 
+// Add the required rule
+extend('required', {
+  ...required,
+  message: 'This field is required'
+});
 
 
 export default {
   name: 'App',
   components: {
-    PersonGrid,
+    appNav: Nav,
+    // PersonGrid
   },
   data: () => {
     return {
