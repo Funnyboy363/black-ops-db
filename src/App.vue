@@ -27,6 +27,8 @@
    
 
     <router-view></router-view>
+
+
 <!-- <person-grid :people="people"></person-grid>
 <person-grid :operator="operators"></person-grid> -->
 
@@ -101,5 +103,6 @@ console.log (people);
   font-size: 25px;
  text-align: center;
 }
+
 
 </style>

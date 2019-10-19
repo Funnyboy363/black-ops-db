@@ -47,10 +47,11 @@
         <v-card-actions>
           <div class="flex-grow-1"></div>
 
-          <v-btn
+          <v-btn class="" id="video"
             color="green darken-1"
-            text
-            @click="dialog = false"
+            text 
+            @click="dialog = false" 
+
           >
            Close
           </v-btn>
@@ -84,20 +85,29 @@ import LazyYoutubeVideo from 'vue-lazy-youtube-video';
 
 
 export default {
+
     props: ["person", "operator"],
 
 
 data () {
       return {
-        dialog: false,
+        dialog: false
+        
       }
     },
    name: 'YourAwesomeComponent',
   components: {
     LazyYoutubeVideo
   },
+  
 
 }
+
+
+
+
+
+
 </script>
 
 

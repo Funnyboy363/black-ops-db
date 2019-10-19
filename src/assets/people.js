@@ -17,7 +17,7 @@ export const people = [
 			"image": [ "https://i.ytimg.com/vi/Wbf4he-YM_Y/maxresdefault.jpg",
 			"https://www.psu.com/app/uploads/2018/08/torque-call-of-duty-black-ops-4-1024x576.jpg"
 		],
-			"video" : "https://www.youtube.com/watch?v=BRmNZp3XqUI"
+			"video" : "https://www.youtube.com/watch?v=oXL1qQsmBkY"
 		},
 		{
 			"name": "Recon",
@@ -99,7 +99,7 @@ export const people = [
 			"subname": "Hunter",
 			"ability": "Tempest: A tactical style rifle that shoots electrically charged Shock Rounds",
 			"equipment": "Seeker Shock Mine: A rolling shock mine that seeks enemy players, paralyzing them on contact",
-			"image": ["https://i.ytimg.com/vi/s2XwOELthuQ/maxresdefault.jpg",
+			"image": ["https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/01/24141312/DuuvovrUYAEW2cQ.jpeg",
 			"https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/01/24141312/DuuvovrUYAEW2cQ.jpeg"
 		],
 		"video": "https://www.youtube.com/watch?v=T2oZTPFHLt0"

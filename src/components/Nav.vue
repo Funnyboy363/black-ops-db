@@ -4,7 +4,7 @@
     
     <ul class="nav nav-pills">
         <li><router-link to="/">Home</router-link></li>
-           <!-- <li> <router-link to="/Contact">Contact</router-link></li> -->
+           <li> <router-link to="/Contact">Contact</router-link></li>
     </ul>
     
 
