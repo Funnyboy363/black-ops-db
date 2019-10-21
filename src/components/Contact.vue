@@ -1,7 +1,7 @@
 <template>
 <div>
-<form class="vue-form" action="https://getsimpleform.com/messages?form_api_token=059e1658671d886c327ca3d9fa9aec53" method="post">
-  <input type='hidden' name='redirect_to ./Home'  />
+<form v-if="show" class="vue-form" action="https://getsimpleform.com/messages?form_api_token=059e1658671d886c327ca3d9fa9aec53" method="post">
+  <input type='hidden' name='redirect_to ./Home'/>
     <div class="error-message">
       <p v-show="!email.valid">Oh, please enter a valid email address.</p>
     </div>
@@ -51,7 +51,7 @@
         <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
       </div>
     
-  <input @click.stop="dialog = true" type='submit' value='Submit form' />
+  <input @click.stop.prevent="dialog = true" type='submit' value='Submit form' />
    </fieldset>
 </form>
 <v-dialog
@@ -76,12 +76,13 @@
           >
           </v-btn>
 
-           <v-btn
+           <v-btn 
             color="green darken-1"
             text
             @click="dialog = false"
+           v-on:click="show = !show"
           >
-            Agree
+            Close
           </v-btn> 
         </v-card-actions>
       </v-card>
@@ -107,6 +108,7 @@ export default {
   data: function() {
     return {
         dialog: false,
+        show: true,
       text: 'Form Submitted Successfully!',
       name: "Operator Name",
       email: {
