@@ -1,7 +1,7 @@
 <template>
 <div>
 <form v-if="show" class="vue-form" action="https://getsimpleform.com/messages?form_api_token=059e1658671d886c327ca3d9fa9aec53" method="post">
-  <input type='hidden' name='redirect_to ./Home'/>
+  <input type='hidden' name='redirect_to https://blackops4db.netlify.com/'/>
     <div class="error-message">
       <p v-show="!email.valid">Oh, please enter a valid email address.</p>
     </div>
