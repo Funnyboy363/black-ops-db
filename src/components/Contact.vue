@@ -1,7 +1,7 @@
 <template>
 <div>
 <form class="vue-form" action="https://getsimpleform.com/messages?form_api_token=059e1658671d886c327ca3d9fa9aec53" method="post">
-  <!-- <input type='hidden' name='redirect_to' value=none /> -->
+  <input type='hidden' name='redirect_to ./Home'  />
     <div class="error-message">
       <p v-show="!email.valid">Oh, please enter a valid email address.</p>
     </div>
@@ -95,9 +95,15 @@
 
 
 <script>
-
+import Home from  './Home.vue';
 
 export default {
+
+     name: 'App',
+  components: {
+    appHome: Home,
+   
+  },
   data: function() {
     return {
         dialog: false,
