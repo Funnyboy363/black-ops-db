@@ -11,8 +11,7 @@
       </v-app-bar-nav>
 
       
-     
-      <!-- <div class="flex-grow-1"></div> -->
+
       <v-row style="align-self: center;">
 <v-col cols="12" xs="12" sm="5" md="5" lg="4">
       <v-toolbar-title><p style="font-size: 25px; text-align: center;">Black Ops DB</p></v-toolbar-title>
@@ -27,10 +26,6 @@
    
 
     <router-view></router-view>
-
-
-<!-- <person-grid :people="people"></person-grid>
-<person-grid :operator="operators"></person-grid> -->
 
 <v-card height="150">
     <v-footer style="background-color: rgb(58, 58, 58);"
@@ -51,11 +46,9 @@
 
 <script>
 
-import PersonGrid from './components/PersonGrid';
 import { people } from './assets/people';
 import { operators } from './assets/operators';
 import Nav from './components/Nav';
-import { ValidationProvider } from 'vee-validate';
 import { extend } from 'vee-validate';
 import { required } from 'vee-validate/dist/rules';
 
@@ -70,7 +63,7 @@ export default {
   name: 'App',
   components: {
     appNav: Nav,
-    // PersonGrid
+   
   },
   data: () => {
     return {
@@ -78,9 +71,6 @@ export default {
     }
   },
 }
-
-
-console.log (people);
 
 </script>
 
