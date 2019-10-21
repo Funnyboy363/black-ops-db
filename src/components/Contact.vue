@@ -51,7 +51,7 @@
         <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
       </div>
     
-  <input @click.stop.prevent="dialog = true" type='submit' value='Submit form' />
+  <input @click.stop="dialog = true" type='submit' value='Submit form' />
    </fieldset>
 </form>
 <v-dialog
