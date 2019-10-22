@@ -96,15 +96,11 @@
 
 
 <script>
-import Home from  './Home.vue';
 
 export default {
 
      name: 'App',
-  components: {
-    appHome: Home,
-   
-  },
+ 
   data: function() {
     return {
         dialog: false,

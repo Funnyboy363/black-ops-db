@@ -1,45 +1,39 @@
 <template>
   <v-app>
 <v-content>
-    <v-toolbar height="250"
+    <v-parallax height="550"
       dark
       prominent
-      src="https://hdwallsource.com/img/2018/5/call-of-duty-black-ops-4-logo-wallpaper-65180-67395-hd-wallpapers.jpg"
+      src="https://i.ytimg.com/vi/avv97ZFhZTo/maxresdefault.jpg"
     >
-      <v-app-bar-nav>
+      <!-- <v-app-bar-nav>
 
-      </v-app-bar-nav>
+      </v-app-bar-nav> -->
 
       
 
-      <v-row style="align-self: center;">
-<v-col cols="12" xs="12" sm="5" md="5" lg="4">
-      <v-toolbar-title><p style="font-size: 25px; text-align: center;">Black Ops DB</p></v-toolbar-title>
-</v-col>
-<v-col cols="12" xs="12" sm="2" md="2" lg="4"></v-col>
-<v-col cols="12" xs="12" sm="5" md="5" lg="4">
-  <p class="subtitle">Information Database</p>
-</v-col>
-      </v-row>
-    </v-toolbar>
-<app-nav></app-nav>
+       <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col class="text-center" cols="12">
+        <h1 class="display-1 font-weight-thin mb-4">Black Ops 4</h1>
+        <h4 class="subheading">Information Database</h4>
+      </v-col>
+    </v-row>
+    </v-parallax>
+<app-nav style="position: sticky; top: 0; z-index: 1;"></app-nav>
    
 
     <router-view></router-view>
 
-<v-card height="150">
-    <v-footer style="background-color: rgb(58, 58, 58);"
-      absolute
-      class="font-weight-medium"
-    >
-      <v-col style="color: white;"
-        class="text-center"
-        cols="12"
-      >
-        <strong>GSWEBDEV</strong> {{ new Date().getFullYear() }} 
-      </v-col>
+<br style="margin-top: 10px;"><br><br><br>
+    <v-footer absolute class="font-weight-medium footer" style="background-color: rgb(241, 104, 0);">
+      <v-col cols="4"> </v-col>
+     <v-col cols="4">  <strong>GSWEBDEV</strong> {{ new Date().getFullYear() }} </v-col>
+     <v-col cols="4"></v-col>
     </v-footer>
-  </v-card>
+
     </v-content>
   </v-app>
 </template>
@@ -77,6 +71,15 @@ export default {
  
 <style scoped>
 
+.footer span {
+  text-align: center;
+}
+
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
+}
 
  .v-card {
   background-color: rgb(241, 104, 0);
