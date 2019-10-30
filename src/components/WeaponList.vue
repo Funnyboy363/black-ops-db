@@ -46,13 +46,28 @@
 <style scoped>
 .v-responsive__content {
     width: 100%;
+    height: 100%;
 }
 
 .v-responsive__content image {
     width: 100%;
+    height: 100%;
 }
 
-.image {
+.v-responsive__sizer {
+   width: 100%;
+    height: 100%;
+}
+
+.v-responsive__content.image {
+  width: 100%;
+  height: 100%;
+}
+
+.v-image {
  width: 100%;
 }
+
+
+
 </style>

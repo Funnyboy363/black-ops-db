@@ -13,6 +13,7 @@ import { people } from '../assets/people';
 import { operators } from '../assets/operators';
 
 
+
 export default {
   components: {
     PersonGrid

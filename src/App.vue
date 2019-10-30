@@ -10,7 +10,7 @@
 
       </v-app-bar-nav> -->
 
-      
+    
 
        <v-row
       align="center"
@@ -39,7 +39,6 @@
 </template>
 
 <script>
-
 import { people } from './assets/people';
 import { operators } from './assets/operators';
 import Nav from './components/Nav';
@@ -61,7 +60,8 @@ export default {
   },
   data: () => {
     return {
-        people, operators
+        people, operators,
+     
     }
   },
 }
