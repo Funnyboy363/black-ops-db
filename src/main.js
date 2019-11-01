@@ -5,8 +5,9 @@ import VueRouter from 'vue-router';
 import { routes } from './routes';
 import store from './store';
 import axios from 'axios';
+import Vuelidate from 'vuelidate'
 
-
+Vue.use(Vuelidate)
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 

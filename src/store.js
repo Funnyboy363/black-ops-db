@@ -4,7 +4,6 @@ import axios from './axios-auth'
 import globalAxios from 'axios'
 
 
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -96,7 +95,7 @@ export default new Vuex.Store({
       localStorage.removeItem('expirationDate')
       localStorage.removeItem('token')
       localStorage.removeItem('userId')
-      router.replace('/signin')
+      routes.replace('/signin')
     },
     storeUser ({commit, state}, userData) {
       if (!state.idToken) {

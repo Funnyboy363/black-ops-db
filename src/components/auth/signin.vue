@@ -1,9 +1,12 @@
 <template>
+<div>
+
+
   <div id="signin">
     <div class="signin-form">
       <form @submit.prevent="onSubmit">
         <div class="input">
-          <label for="email">Mail</label>
+          <label for="email">Email Address:</label>
           <input
                   type="email"
                   id="email"
@@ -22,10 +25,10 @@
       </form>
     </div>
   </div>
+</div>
 </template>
 
 <script>
-import axios from '../../axios-auth'
   export default {
     data () {
       return {
@@ -40,13 +43,7 @@ import axios from '../../axios-auth'
           password: this.password,
         }
         console.log(formData)
-        axios.post('/verifyPassword?key=AIzaSyDzMY1R5XT_ytoKRjjbsGoAKLxghQZuDAY', {
-          email: formData.email,
-          password: formData.password,
-          returnSecureToken: true
-        })
-        .then(res => console.log(res))
-        .catch(error => console.log(error))
+        this.$store.dispatch('login', {email: formData.email, password: formData.password})
       }
     }
   }
@@ -56,9 +53,10 @@ import axios from '../../axios-auth'
   .signin-form {
     width: 400px;
     margin: 30px auto;
-    border: 1px solid #eee;
+    border: 1px solid black;
     padding: 20px;
-    box-shadow: 0 2px 3px #ccc;
+    border-radius: 10px;
+    background-color: #F16800;
   }
 
   .input {
@@ -67,7 +65,7 @@ import axios from '../../axios-auth'
 
   .input label {
     display: block;
-    color: #4e4e4e;
+    color: white;
     margin-bottom: 6px;
   }
 
@@ -86,8 +84,8 @@ import axios from '../../axios-auth'
   }
 
   .submit button {
-    border: 1px solid #521751;
-    color: #521751;
+    border: 1px solid rgb(117, 55, 8);
+    color: rgb(117, 55, 8);
     padding: 10px 20px;
     font: inherit;
     cursor: pointer;
@@ -95,7 +93,7 @@ import axios from '../../axios-auth'
 
   .submit button:hover,
   .submit button:active {
-    background-color: #521751;
+    background-color: rgb(168, 78, 9);
     color: white;
   }
 
