@@ -110,13 +110,20 @@ sameAs: sameAs('password')
 </script>
 
 <style scoped>
+
+
+h2 {
+  color: #F16800;
+  text-align: center;
+}
+
   .signup-form {
     width: 400px;
     margin: 30px auto;
-    border: 1px solid #eee;
     padding: 20px;
     box-shadow: 0 2px 3px #ccc;
-    background-color: #F16800;
+    background-color: rgb(46, 46, 46);
+      border-radius: 10px;
   }
 
   .input {
@@ -125,6 +132,7 @@ sameAs: sameAs('password')
 
   .input label {
     display: block;
+     color: #F16800;
     
     margin-bottom: 6px;
   }

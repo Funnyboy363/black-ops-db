@@ -5,6 +5,7 @@
   <div id="signin">
     <div class="signin-form">
       <form @submit.prevent="onSubmit">
+         <h2>Sign In</h2>
         <div class="input">
           <label for="email">Email Address:</label>
           <input
@@ -50,13 +51,22 @@
 </script>
 
 <style scoped>
+
+
+h2 {
+  color: #F16800;
+  text-align: center;
+}
+
+
+
   .signin-form {
     width: 400px;
     margin: 30px auto;
     border: 1px solid black;
     padding: 20px;
     border-radius: 10px;
-    background-color: #F16800;
+    background-color: rgb(46, 46, 46);
   }
 
   .input {
@@ -65,7 +75,7 @@
 
   .input label {
     display: block;
-    color: white;
+    color: #F16800;
     margin-bottom: 6px;
   }
 
@@ -85,15 +95,16 @@
 
   .submit button {
     border: 1px solid rgb(117, 55, 8);
-    color: rgb(117, 55, 8);
+    color: white;
     padding: 10px 20px;
     font: inherit;
     cursor: pointer;
+     background-color: rgb(134, 63, 8);
   }
 
   .submit button:hover,
   .submit button:active {
-    background-color: rgb(168, 78, 9);
+    background-color: rgb(148, 69, 9);
     color: white;
   }
 
