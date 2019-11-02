@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from './axios-auth'
 import globalAxios from 'axios'
+import routes from './routes'
 
 
 Vue.use(Vuex)

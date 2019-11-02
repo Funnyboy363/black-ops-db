@@ -6,14 +6,11 @@
         <li v-if="auth"><router-link  to="/">Home</router-link></li>
          <li v-if="auth"> <router-link to="/WeaponList">Weapons</router-link></li>
            <li v-if="auth"> <router-link to="/Contact">Contact</router-link></li>
+           <li v-if="auth"><router-link to="/dashboard">Dashboard</router-link></li>
              <li v-if="!auth"> <router-link to="/signup">Sign Up</router-link> </li>
      <li v-if="!auth"> <router-link to="/signin">Sign In</router-link> </li>
-     <!-- <li v-if="auth"><router-link to="#"> Hello {{ name }} ! </router-link></li> -->
      <li v-if="auth"><router-link to="/signin"> <button @click="onLogout" class="logout">Logout</button></router-link></li>
-     <!-- <li v-if="auth"><router-link to="/dashboard">Dashboard</router-link></li> -->
     </ul>
-    
-
 </template>
 
 
@@ -49,17 +46,14 @@ ul {
     background-color: #000000;
     padding: 15px 0;
    display: flex;
+   justify-content: flex-end;
+    padding-right: 85px;
 
 }
 
-
-ul li:nth-child(1) {
-    margin-left: 85px;
-}
 
 ul li {
     margin-right: 15px;
-    border-right: 2px solid darkgray;
 padding-right: 15px;
 display: block;
 }
