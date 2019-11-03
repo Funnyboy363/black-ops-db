@@ -1,12 +1,11 @@
 <template>
-  <v-carousel hide-delimiters>
+  <v-carousel>
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
     
       :src="item.src"
     ></v-carousel-item>
-  <p>test text</p>
   </v-carousel>
 </template>
 
@@ -20,6 +19,7 @@
         items: [
           {
             src: 'https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2018/10/12043158/Image-from-iOS-10.jpg',
+            text: 'gun 1',
           },
           {
             src: 'https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2018/10/12043217/Image-from-iOS-11.jpg',
@@ -67,7 +67,6 @@
 .v-image {
  width: 100%;
 }
-
 
 
 </style>

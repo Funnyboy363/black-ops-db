@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
 <person-grid :people="people"></person-grid>
 <person-grid :operator="operators"></person-grid> 
 
@@ -25,3 +25,13 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+h2 {
+  font-size: 36px;
+  color: #FF6D00;
+  margin: 15px 0;
+}
+
+</style>

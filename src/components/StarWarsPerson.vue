@@ -1,6 +1,8 @@
 <template>
 <div>
   
+
+  
  <v-card
     class="mx-auto"
     max-width="350"
@@ -51,7 +53,7 @@
             color="green darken-1"
             text 
             @click="dialog = false" 
-
+        
           >
            Close
           </v-btn>
