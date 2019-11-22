@@ -29,18 +29,19 @@
     <v-card-actions>
       <v-row style="margin-left: 10px;" justify="left">
     <v-btn small width="80px"
-      color="#F8740F" dark @click.stop="dialog = true">
+      color="#F8740F" dark @click="togglePlayable()">
       more
     </v-btn>
 
     <v-dialog
       v-model="dialog"
-      max-width="500"
-    >
+      max-width="500">
       <v-card>
-        <LazyYoutubeVideo :url="person.video"></LazyYoutubeVideo>
-        <!-- <v-img :src="person.image[1]"></v-img> -->
+        
+        <LazyYoutubeVideo v-if="playable" :url="person.video"></LazyYoutubeVideo>
+                <!-- <v-img :src="person.image[1]"></v-img> -->
         <v-card-title class="headline"><span style="font-size: 15px; border-bottom: 2px solid black;">More about {{ person.name}}</span></v-card-title>
+
 
         <v-card-text>
         <h3>Equipment:</h3> {{ person.equipment }}
@@ -52,22 +53,16 @@
           <v-btn class="" id="video"
             color="green darken-1"
             text 
-            @click="dialog = false" 
-        
-          >
+            @click="togglePlayable()">
            Close
           </v-btn>
 
-          <!-- <v-btn
-            color="green darken-1"
-            text
-            @click="dialog = false"
-          >
-            Agree
-          </v-btn> -->
         </v-card-actions>
       </v-card>
     </v-dialog>
+
+
+
   </v-row>
     </v-card-actions>
   </v-card>   
@@ -93,15 +88,27 @@ export default {
 
 data () {
       return {
-        dialog: false
-        
+        dialog: false,
+        toggleVideo: false,
+        playable: false
       }
     },
+
+methods: {
+  togglePlayable() {
+    this.dialog = !this.dialog,
+    this.playable = !this.playable
+  }
+},
+
    name: 'YourAwesomeComponent',
   components: {
     LazyYoutubeVideo
   },
-  
+
+
+
+
 
 }
 
