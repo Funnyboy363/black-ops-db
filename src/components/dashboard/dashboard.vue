@@ -11,7 +11,7 @@
 <div class="row" style="margin-bottom: 35px;">
      <div class="col-md-2"></div>
       <div class="col-md-8">
-    <LazyYoutubeVideo url="https://www.youtube.com/watch?v=KksmTloMKuQ"></LazyYoutubeVideo></div>
+    <LazyYoutubeVideo url="https://www.youtube.com/watch?v=6kqe2ICmTxc"></LazyYoutubeVideo></div>
      <div class="col-md-2"></div>
 </div>
 

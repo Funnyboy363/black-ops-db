@@ -1,92 +1,92 @@
 <template>
 <div>
-<form v-if="show" class="vue-form" action="https://getsimpleform.com/messages?form_api_token=059e1658671d886c327ca3d9fa9aec53" method="post">
-  <input type='hidden' name='redirect_to' value='<https://blackops4db.netlify.com/>'/>
-    <div class="error-message">
-      <p v-show="!email.valid">Oh, please enter a valid email address.</p>
+<div class="container">
+<div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a  class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Pleasant Grove, Utah</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 8014270689</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>gshoop.webdev@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
     </div>
 
-    <fieldset>
-      <legend>Fill out this form to contact the developer</legend>
-      <div>
-        <label class="label" for="name">Name</label>
-        <input type="text" name="name" id="name" required="" v-model="name">
-      </div>
-      <div>
-        <label class="label" for="email">Email</label>
-        <input type="email" name="email" id="email" required=""
-               :class="{ email , error: !email.valid }"
-               v-model="email.value">
-      </div>
-      <div>
-        <h4>Console</h4>
-         <ul class="vue-form-list">
-          <li>
-            <input type="radio" name="Console-1" id="Console-1" value="XBOXONE" 
-                   v-model="selection.framework">
-            <label for="radio-1">XBOXONE</label>
-          </li>
-          <li>
-            <input type="radio" name="Console-2" id="Console-2" value="Playstation" 
-                   v-model="selection.framework">
-            <label for="radio-2">Playstation</label>
-          </li>
-          <li>
-            <input type="radio" name="Console-3" id="Console-3" value="PC" 
-                   v-model="selection.framework">
-            <label for="radio-3">PC</label>
-          </li>
-          <li>
-            <input type="radio" name="Console-4" id="Console-4" value="Other" 
-                   v-model="selection.framework">
-            <label for="radio-3">Other</label>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <label class="label" for="textarea">Message with Counter</label>
-        <textarea class="message" name="textarea" id="textarea" required="" 
-                  v-model="message.text" 
-                  :maxlength="message.maxlength"></textarea>
-        <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
-      </div>
-    
-  <input @click.stop="dialog = true" type='submit' value='Submit form' />
-   </fieldset>
-</form>
-<v-dialog
-      v-model="dialog"
-      max-width="500"
-    >
-      <v-card>
-        <v-card-title class="headline"><span style="font-size: 15px; border-bottom: 2px solid black;">Thank You!!</span></v-card-title>
-
-        <v-card-text>
-        <p>Form Has Been Submitted!</p>
-        </v-card-text>
-
-        <v-card-actions>
-          <div class="flex-grow-1"></div>
-
-          <v-btn class="" id="video"
-            color="green darken-1"
-            text 
-            @click="dialog = false" 
-
-          >
-          </v-btn>
-
-           <v-btn 
-            color="green darken-1"
-            text
-            @click="dialog = false"
-           v-on:click="show = !show"
-          >
-            Close
-          </v-btn> 
-        </v-card-actions>
-      </v-card>
-    </v-dialog> 
+</div>
 </div>
 </template>
 
@@ -96,56 +96,37 @@
 
 
 <script>
-
-export default {
-
-     name: 'App',
- 
-  data: function() {
-    return {
-        dialog: false,
-        show: true,
-      text: 'Form Submitted Successfully!',
-      name: "Operator Name",
-      email: {
-        value: "email@email.com",
-        valid: true,
-      },
-      features: ["Reactivity", "Encapsulation", "Data Binding"],
-      selection: {
-        member: "0",
-        framework: "vue",
-        features: []
-      },
-      message: {
-        text: `To whom it may concern,\n...`,
-        maxlength: 255
-      },
-      submitted: false
-    };
-  },
-  methods: {
-    // submit form handler
-    submit: function() {
-      this.submitted = true;
-    },
-    // validate by type and value
-    validate: function(type, value) {
-      if (type === "email") {
-        this.email.valid = this.isEmail(value) ? true : false;
-      }
-    },
-    checkAll: function(event) {
-      this.selection.features = event.target.checked ? this.features : [];
+function validateForm() {
+    var name =  document.getElementById('name').value;
+    if (name == "") {
+        document.getElementById('status').innerHTML = "Name cannot be empty";
+        return false;
     }
-  },
-  watch: {
-    // watching nested property
-    "email.value": function(value) {
-      this.validate("email", value);
+    var email =  document.getElementById('email').value;
+    if (email == "") {
+        document.getElementById('status').innerHTML = "Email cannot be empty";
+        return false;
+    } else {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            document.getElementById('status').innerHTML = "Email format invalid";
+            return false;
+        }
     }
-  },
-}
+    var subject =  document.getElementById('subject').value;
+    if (subject == "") {
+        document.getElementById('status').innerHTML = "Subject cannot be empty";
+        return false;
+    }
+    var message =  document.getElementById('message').value;
+    if (message == "") {
+        document.getElementById('status').innerHTML = "Message cannot be empty";
+        return false;
+    }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+  
+    }
 
 
 

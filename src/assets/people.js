@@ -104,6 +104,42 @@ export const people = [
 		],
 		"video": "https://www.youtube.com/watch?v=T2oZTPFHLt0"
 		},
+		{
+			"name": "Zero",
+			"subname": "Cyber",
+			"ability": "Ice Pick - A powerful hacking device that disables enemy computer systems and steals or destroys their equipment.",
+			"equipment": "Disruptor - An EMP grenade that disrupts enemy equipment and their heads-up displays.",
+			"image": ["https://oyster.ignimgs.com/mediawiki/apis.ign.com/call-of-duty-black-ops-4/2/2d/Black_Ops_4_-_Zero.jpg"
+		],
+		"video": "https://www.youtube.com/watch?v=0LfEPjqzZSg"
+		},
+		{
+			"name": "Outrider",
+			"subname": "Scout",
+			"ability": "Sparrow - A lethal bow with explosive-tipped arrows that can eliminate targets with one shot.",
+			"equipment": " Hawk - Pilotable camera drone that can scout ahead and visually tag enemies within its radius.",
+			"image": ["https://blog.activision.com/content/dam/atvi/activision/atvi-touchui/blog/callofduty/feature/Outrider1.jpg"
+		],
+		"video": "https://www.youtube.com/watch?v=CJtFHZ4v-10"
+		},
+		{
+			"name": "Spectre",
+			"subname": "Assassin",
+			"ability": "Smoke - A smoke grenade with large radius that enables Spectre to view any enemies inside the smoke.",
+			"equipment": "Shadow Blade - Cuts down enemies in melee range in third-person view. Roll to close distance and avoid gunfire.",
+			"image": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcm_SWQIfjYGIqNntIJBWXXHLgLxkqmRoHbLEJjXi-gOh15va6&s"
+		],
+		"video": "https://www.youtube.com/watch?v=XPXpKxz6LE4"
+		},
 
+		{
+			"name": "Reaper",
+			"subname": "Experimental War Robot-115",
+			"ability": "Scythe: A dual-barreled detached turret.",
+			"equipment": "Radar Shroud : Blocks a specific area around the point of impact, making it look like grayed-out static in the enemy's mini-map, for a limited amount of time",
+			"image": ["https://www.vgr.com/wp-content/uploads/2018/12/blackout-reaper-600x300.jpg"
+		],
+		"video": "https://www.youtube.com/watch?v=uDiQXCJy9W8"
+		},
 
 	]
