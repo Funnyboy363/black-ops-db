@@ -19,15 +19,6 @@ export const routes = [
         }
     }
 },
-    { path: '/Contact', component: Contact,
-    beforeEnter (to, from, next) {
-        if (store.state.idToken) {
-            next()
-        } else {
-            next('/signin')
-        }
-    }
-},
     { path: '/WeaponList', component: Weapons,
     beforeEnter (to, from, next) {
         if (store.state.idToken) {
