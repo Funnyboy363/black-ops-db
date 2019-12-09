@@ -1,4 +1,6 @@
 # final-project
+Make sure to login with username: test1@gmail.com password: qwertyu
+if the signup page doesn't work.
 See [Black Ops 4 Database Site](https://blackops4db.netlify.com).
 
  ## Effectively use conditional logic and JavaScript array methods to render large lists.

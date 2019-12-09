@@ -124,10 +124,12 @@ h2 {
     box-shadow: 0 2px 3px #ccc;
     background-color: rgb(46, 46, 46);
       border-radius: 10px;
+      color: white;
   }
 
   .input {
     margin: 10px auto;
+    color: white;
   }
 
   .input label {
