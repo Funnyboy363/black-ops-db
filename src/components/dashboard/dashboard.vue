@@ -46,7 +46,7 @@
       max-height="200"
     ></v-img>
 </center>
-            <p>
+            <p class="tab-text">
              <span style="font-weight: 700;">Black Ops 4's multiplayer</span> features the return of Specialists, unique soldier characters with special abilities and traits. 
              At launch, the game features a total of ten Specialists, six of which (Ruin, Prophet, Battery, Seraph, Nomad, Firebreak) 
              are returning characters from Black Ops III, while the other four (Recon, Ajax, Torque, Crash) are new additions. 
@@ -75,7 +75,7 @@ In addition, the game includes Specialist Headquarters, a solo mode featuring sk
       max-height="200"
     ></v-img>
 </center>
-            <p>
+            <p class="tab-text">
          <span style="font-weight: 700;"> Zombies returns as the cooperative multiplayer mode for Black Ops 4.</span> The game mode features a wider range of customization, 
           allowing for more personalized play styles. Mechanics of the game can be customized via "Custom Mutations", which include over 
           100 variables, such as overall difficulty, zombie speed, health, damage, and more. Time-limited events known as "Callings" are 
@@ -115,7 +115,7 @@ Black Ops 4 is also the first game to feature two distinctive, separate storylin
       max-height="200"
     ></v-img>
 </center>
-            <p>
+            <p class="tab-text">
             Black Ops 4 features a <span style="font-weight: 700;">battle royale game mode called Blackout</span> which serves as a stand-in for the campaign mode.
              While utilizing the traditional Black Ops combat style, the mode includes the largest map featured in a Call of Duty
               title. Players compete against each other through locations appeared in previous Black Ops games. This mode will also
@@ -166,6 +166,11 @@ respawns included, and no vehicles are present.
 
   p {
     color: black;
+  }
+
+
+  .tab-text {
+    margin-top: 20px;
   }
 
 
